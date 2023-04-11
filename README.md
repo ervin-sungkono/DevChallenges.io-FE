@@ -57,7 +57,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 ```bash
 $ git clone https://github.com/ervin-sungkono/DevChallenges.io.git
 
-$ git checkout #1-button-component
+$ git checkout button-component
 
 $ npm install
 

@@ -1,0 +1,163 @@
+$input-border-default: #828282;
+$input-border-error: #D32F2F;
+$input-border-hover: #333333;
+$input-border-focus: #2962FF;
+$input-border-disabled: #E0E0E0; 
+
+$input-bg-disabled: #F2F2F2;
+
+$text-black: #333333;
+$text-grey: #828282;
+$text-danger: #D32F2F;
+$text-focus: #2962FF;
+
+$input-padding-sm: 10px 12px;
+$input-padding-md: 18px 12px;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+footer{
+  margin-top: 32px;
+  text-align: center;
+}
+
+textarea{
+  resize: none;
+}
+
+.container{
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin-bottom: 2rem;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    .btn-preview-card{
+      width: 320px;
+      height: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .input-group{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .radio-group{
+        display: flex;
+        gap: 8px;
+        label{
+          margin-left: 4px;
+        }
+      }
+      .select-group{
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+}
+
+// Input Component Styling
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  > label{
+    color: $text-black;
+    font-size: 14px;
+    transition: 0.35s color ease-in-out;
+  }
+  > span{
+    color: $text-grey;
+    font-size: 10px;
+    transition: 0.35s color ease-in-out;
+  }
+  &.invalid:not(.disabled,:hover){
+    .input-group,
+    .input-group:focus-within{
+      border: 1px solid $input-border-error;
+    }
+    label,
+    span{
+      color: $text-danger;
+    }
+  }
+  &.disabled{
+    .input-group{
+      border: 1px solid $input-border-disabled !important;
+      background-color: $input-bg-disabled !important;
+    }
+  }
+  &:focus-within:not(.invalid){
+    .input-group{
+      border: 1px solid $input-border-focus;
+    }
+    label,
+    span{
+      color: $text-focus;
+    }
+  }
+  .input-group{
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid $input-border-default;
+    border-radius: 8px;
+    transition: 0.35s color ease-in-out, 0.35s border ease-in-out;
+    input,
+    textarea{
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      color: $text-black;
+      font-size: 14px;
+    }
+    input::placeholder,
+    textarea::placeholder{
+      color: $text-grey;
+    }
+    span{
+      transition: 0.35s color ease-in-out
+    }
+    &.size-md{
+      input,
+      textarea{
+        padding: $input-padding-md;
+      }
+    }
+    &.size-sm{
+      input,
+      textarea{
+        padding: $input-padding-sm;
+      }
+    }
+    &:hover:not(:focus-within){
+      border: 1px solid $input-border-hover;
+    }
+  }
+}

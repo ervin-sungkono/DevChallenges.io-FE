@@ -1,5 +1,6 @@
 import Button from '@/components/Button'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState } from 'react'
 import { CopyBlock, dracula } from 'react-code-blocks'
 
@@ -143,6 +144,7 @@ export default function Home() {
             wrapLines={true}
           />
         </div>
+        <footer>Created by <Link href={"https://github.com/ervin-sungkono"} target='_blank'>Ervin Cahyadinata Sungkono</Link></footer>
       </main>
     </>
   )

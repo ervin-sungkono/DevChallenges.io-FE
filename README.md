@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/7HZ9iXp6fUoynAnUmMU5">
       Solution
     </a>
     <span> | </span>
@@ -57,7 +57,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 ```bash
 $ git clone https://github.com/ervin-sungkono/DevChallenges.io.git
 
-$ git checkout #1-button-component
+$ git checkout button-components
 
 $ npm install
 

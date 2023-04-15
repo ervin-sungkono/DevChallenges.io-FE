@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://random-quote-generator-ervin-sungkono.vercel.app/">
+    <a href="https://random-quote-generator.vercel.app/">
       Demo
     </a>
     <span> | </span>

@@ -85,11 +85,13 @@
         </button>
       </div>
     </section>
+    <footer>Created by <a href="https://github.com/ervin-sungkono">Ervin Cahyadinata Sungkono</a> - devChallenges.io</footer>
   </section>
 </template>
 
 <style>
   .todoapp{
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -161,5 +163,12 @@
 
   #delete-completed-btn:hover{
     background-color: rgb(184, 10, 10);
+  }
+  footer{
+    position: absolute;
+    bottom: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding-inline: 1.5rem;
   }
 </style>
